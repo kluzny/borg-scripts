@@ -1,7 +1,13 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=/media/kyle/slowpoke/backups
+if [ -d /media/kyle/slowpoke/backups ]; then
+  export BORG_REPO=/media/kyle/slowpoke/backups
+fi
+
+if [ -d /media/kyle/speedy/backups ]; then
+  export BORG_REPO=/media/kyle/speedy/backups
+fi
 
 # See the section "Passphrase notes" for more infos.
 export BORG_PASSCOMMAND="cat /home/kyle/.borg-passphrase"
