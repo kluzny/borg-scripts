@@ -4,7 +4,7 @@
 export BORG_REPO=/media/kyle/slowpoke/backups
 
 # See the section "Passphrase notes" for more infos.
-export BORG_PASSCOMMAND="cat $HOME/.borg-passphrase"
+export BORG_PASSCOMMAND="cat /home/kyle/.borg-passphrase"
 
 # some helpers and error handling:
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
