@@ -1,8 +1,8 @@
 #!/bin/sh
 
-export BORG_RSH="$(cat .borg-rsh)"
-export BORG_REPO="$(cat .borg-repo-remote)"
-export BORG_PASSPHRASE="$(cat .borg-passphrase)"
+export BORG_RSH="$(jq -r '.remote.rsh' .secrets.json )"
+export BORG_REPO="$(jq -r '.remote.repo' .secrets.json)"
+export BORG_PASSPHRASE="$(jq -r '.password' .secrets.json)"
 
 # some helpers and error handling:
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }

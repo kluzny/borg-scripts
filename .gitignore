@@ -1,4 +1,1 @@
-.borg-passphrase
-.borg-repo-remote
-.borg-repo-local
-.borg-rsh
+.secrets.json

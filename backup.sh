@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO="$(cat .borg-repo-local)"
+export BORG_REPO="$(jq -r '.local.repo' .secrets.json)"
 
 # See the section "Passphrase notes" for more infos.
-export BORG_PASSPHRASE="$(cat .borg-passphrase)"
+export BORG_PASSPHRASE="$(jq -r '.password' .secrets.json)"
 
 # some helpers and error handling:
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
