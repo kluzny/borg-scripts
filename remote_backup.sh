@@ -1,9 +1,7 @@
 #!/bin/sh
 
-# Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO="$(cat .borg-repo-local)"
-
-# See the section "Passphrase notes" for more infos.
+export BORG_RSH="$(cat .borg-rsh)"
+export BORG_REPO="$(cat .borg-repo-remote)"
 export BORG_PASSPHRASE="$(cat .borg-passphrase)"
 
 # some helpers and error handling:
