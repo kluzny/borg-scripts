@@ -24,15 +24,16 @@ borg create                                   \
     --compression lz4                         \
     --exclude-caches                          \
     --exclude '/home/*/.cache/*'              \
-    --exclude '/home/kyle/.config/vivaldi/*'  \
     --exclude '/home/kyle/.config/Signal/*'   \
+    --exclude '/home/kyle/.config/vivaldi/*'  \
     --exclude '/home/kyle/.config/yarn/*'     \
     --exclude '/home/kyle/.fastai/data/*'     \
+    --exclude '/home/kyle/.node-gyp/*'        \
     --exclude '/home/kyle/.npm/*'             \
     --exclude '/home/kyle/.nvm/*'             \
-    --exclude '/home/kyle/.node-gyp/*'        \
-    --exclude '/home/kyle/Development/miniconda3/*'        \
     --exclude '/home/kyle/.rbenv/*'           \
+    --exclude '/home/kyle/.rustup/*'          \
+    --exclude '/home/kyle/Development/miniconda3/*'        \
     --exclude '/var/cache/*'                  \
     --exclude '/var/tmp/*'                    \
     ::'{hostname}-{now}'                      \
