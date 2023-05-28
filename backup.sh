@@ -36,6 +36,7 @@ borg create                                   \
     --exclude '/home/kyle/Development/miniconda3/*'        \
     --exclude '/var/cache/*'                  \
     --exclude '/var/tmp/*'                    \
+    --exclude '/var/lib/app-info/icons/*'     \
     ::'{hostname}-{now}'                      \
     /etc                                      \
     /home                                     \
